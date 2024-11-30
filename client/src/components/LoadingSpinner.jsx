@@ -1,23 +1,13 @@
-import { cn } from "@/lib/utils";
+import { Loader } from 'lucide-react'
+import React from 'react'
 
-const LoadingSpinner = ({ size = "md", className }) => {
-  const sizeClasses = {
-    sm: "w-4 h-4 border-2",
-    md: "w-6 h-6 border-4",
-    lg: "w-10 h-10 border-4",
-  };
-
+const LoadingSpinner = () => {
   return (
-    <div className="flex items-center justify-center min-h-screen bg-gray-100">
-    <div
-      className={cn(
-        "rounded-full border-t-transparent animate-spin",
-        sizeClasses[size],
-        className
-      )}
-    />
-  </div>
-  );
-};
+    <div className="flex flex-col items-center justify-center min-h-screen bg-gray-50">
+      <Loader className="animate-spin h-16 w-16 text-blue-600" />
+      <p className="mt-4 text-lg font-semibold text-gray-700">Loading, please wait...</p>
+    </div>
+  )
+}
 
 export default LoadingSpinner;
