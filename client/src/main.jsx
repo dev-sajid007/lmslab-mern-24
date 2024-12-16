@@ -15,9 +15,9 @@ const CustomLoader = ({ children }) => {
 
 createRoot(document.getElementById("root")).render(
   <Provider store={store}>
-      <CustomLoader>
+    <CustomLoader>
       <RouterProvider router={router} />
       <Toaster />
-  </CustomLoader>
-    </Provider>
+    </CustomLoader>
+  </Provider>
 );
